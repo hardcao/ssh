@@ -30,5 +30,7 @@ public class test extends TestCase {
 		String test = new String("test1");
 		MemcachedClient mc = new MemcachedClient( "test2" );
 		mc.set( "foo2", test );
+		Object tt = mc.get("foo2");
+		System.out.println(tt);
 	}
 }

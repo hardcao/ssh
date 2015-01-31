@@ -19,6 +19,6 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>  
           
         <!-- 映射文件 -->  
-        <mapping resource="com/sshProject/Model/Admin.hbm.xml"/>  
+        <mapping resource="com/ssh/Model/Admin.hbm.xml"/>  
     </session-factory>  
 </hibernate-configuration> 

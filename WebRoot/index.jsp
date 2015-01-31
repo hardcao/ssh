@@ -75,16 +75,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav pull-right">
 		<li class="navbar-el" style="font-size:20px">
-		  <a href="http://123.56.95.108:8088/aaa/" class="navbar-link" style="padding-top:21px; ;">首页</a>
+		  <a href="http://localhost/ssh/" class="navbar-link" style="padding-top:21px; ;">首页</a>
 	    </li>
 		<li class="navbar-el" style="font-size:20px">
-		  <a href="http://123.56.95.108:8088/aaa/" class="navbar-link" style="padding-top:21px; ;">产品介绍</a>
+		  <a href="http://localhost/ssh/" class="navbar-link" style="padding-top:21px; ;">产品介绍</a>
 	    </li>
 	    <li class="navbar-el" style="font-size:20px">
-		  <a href="http://123.56.95.108:8088/aaa/" class="navbar-link" style="padding-top:21px; ;">常见问题</a>
+		  <a href="http://localhost/ssh/" class="navbar-link" style="padding-top:21px; ;">常见问题</a>
 	    </li>
 	    <li class="navbar-el" style="font-size:20px">
-		  <a href="http://123.56.95.108:8088/aaa/" class="navbar-link" style="padding-top:21px; ;">关于我们</a>
+		  <a href="http://localhost/ssh/" class="navbar-link" style="padding-top:21px; ;">关于我们</a>
 	    </li>
 	    <li class="navbar-el" style="font-size:20px">
 	      <a href="https://ssl.usefedora.com/login_register.php?affcode=&site=2655#login" class="navbar-link" style="padding-top:21px; ;">登录</a>
@@ -186,7 +186,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="http://v3.bootcss.com/examples/carousel/#">Back to top</a></p>
-        <p>© 2015 安家乐, Inc. · @by Who'sKing FE Pearl' · <a href="http://123.56.95.108:8088/aaa">Terms</a></p>
+        <p>© 2015 安家乐, Inc. · @by Who'sKing FE Pearl' · <a href="http://localhost/ssh">Terms</a></p>
       </footer>
 
     </div><!-- /.container -->
