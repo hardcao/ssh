@@ -18,11 +18,16 @@
  */
 package com.ssh.memcached.test;
 
-import com.ssh.memcached.*;
-import java.util.*;
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Map;
 
 import junit.framework.TestCase;
+
+import com.ssh.memcached.Logger;
+import com.ssh.memcached.MemcachedClient;
+import com.ssh.memcached.SockIOPool;
 
 
 public class UnitTests extends TestCase {

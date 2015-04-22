@@ -7,6 +7,8 @@ import org.hibernate.cfg.Configuration;
 
 public final class HibernateUtil {
 	private static SessionFactory sessionFactory;
+	private static int userID;
+	private static int problemID;
 	
 	private HibernateUtil() {
 	}
@@ -67,5 +69,29 @@ public final class HibernateUtil {
 				session.close();
 			}
 		}
+	}
+	
+	public static  Object getObject(Class objectClass, int objectID) {
+		Session session = null;
+		try {
+			session = HibernateUtil.getSession();
+			return session.get(objectClass, objectID);
+		} finally {
+			if(session != null) {
+				session.close();
+			}
+		}
+	}
+	
+	public static int getUserID()
+	{
+		userID ++;
+		return userID;
+	}
+	
+	public static int getProblemID()
+	{
+		problemID ++;
+		return problemID;
 	}
 }

@@ -1,8 +1,24 @@
 package com.ssh.test;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.ssh.dao.impl.AdminDaoHibernate;
+import com.ssh.dao.impl.ProblemContentDaoImpl;
+import com.ssh.dao.impl.UserInfoDaoImpl;
+import com.ssh.hibernate.HibernateUtil;
 import com.ssh.memcached.MemcachedClient;
 import com.ssh.memcached.SockIOPool;
 import com.ssh.memcached.test.UnitTests;
+import com.ssh.model.Admins;
+import com.ssh.model.ProblemComment;
+import com.ssh.model.ProblemContent;
+import com.ssh.model.UserInfo;
 
 import junit.framework.TestCase;
 
@@ -32,5 +48,26 @@ public class test extends TestCase {
 		mc.set( "foo2", test );
 		Object tt = mc.get("foo2");
 		System.out.println(tt);
+	}
+	public void testCreateUser()
+	{
+		UserInfoDaoImpl.getInstance().createUser("test", "test");
+	}
+	
+	public void testCreateProblem()
+	{
+		ProblemComment comment = new ProblemComment();
+		comment.setCommentContent("test");
+		comment.setCommentTime(9);
+		comment.setProblemPrompt("test");
+		Set<ProblemComment> list = new HashSet<ProblemComment>();
+		ProblemContent problem =  ProblemContentDaoImpl.getInstance().createProblem(3,3,4,"test","test","test","test","test");
+		list.add(comment);
+		problem.setCommentList(list);
+		comment.setProblem(problem);
+		HibernateUtil.save(comment);
+		ProblemContentDaoImpl.getInstance().save(problem);
+		
+		
 	}
 }

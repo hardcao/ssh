@@ -5,14 +5,25 @@ import java.util.List;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import com.ssh.dao.AdminDao;
+import com.ssh.hibernate.HibernateUtil;
 import com.ssh.model.Admins;
 
 public class AdminDaoHibernate extends HibernateDaoSupport implements AdminDao {
     /*
      * ɾ��ӿڵ�ʵ��?
      */
+	
+	 private static final AdminDaoHibernate instance = new AdminDaoHibernate();
+	    
+	  public static AdminDaoHibernate getInstance() {
+	    return instance;
+	  }
+	    
+	  private AdminDaoHibernate() {
+	    
+	  }
 	public void delete(int id) {
-		getHibernateTemplate().delete(getAdmin(id));
+		HibernateUtil.delete(logger);
 	}
 	//----------------------------------------------------------------------------
 	
@@ -37,7 +48,8 @@ public class AdminDaoHibernate extends HibernateDaoSupport implements AdminDao {
      */
 	public void save(Admins a) {
 		System.out.println("in hibernate class metod = save");
-		getHibernateTemplate().saveOrUpdate(a);
+		HibernateUtil.save(a);
+//		getHibernateTemplate().saveOrUpdate(a);
 
 	}
 	//----------------------------------------------------------------------------

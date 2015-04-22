@@ -17,7 +17,7 @@
  */
 package com.ssh.memcached;
 
-import java.io.*;
+import java.io.IOException;
 
 /**
  * Bridge class to provide nested Exceptions with IOException which has

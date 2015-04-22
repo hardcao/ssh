@@ -1,6 +1,5 @@
 package com.ssh.web.action;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;

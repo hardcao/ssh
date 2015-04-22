@@ -17,11 +17,14 @@
  */
 package com.ssh.memcached.test;
 
-import com.ssh.memcached.*;
-import java.util.*;
+import java.util.Map;
+
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.log4j.BasicConfigurator;
+
+import com.ssh.memcached.MemcachedClient;
+import com.ssh.memcached.SockIOPool;
 
 public class MemcachedBench {
 

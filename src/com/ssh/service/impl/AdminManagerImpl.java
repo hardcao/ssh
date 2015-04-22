@@ -3,7 +3,6 @@ package com.ssh.service.impl;
 import java.util.List;
 
 import com.ssh.dao.AdminDao;
-import com.ssh.dao.impl.AdminDaoHibernate;
 import com.ssh.model.Admins;
 import com.ssh.service.AdminManager;
 

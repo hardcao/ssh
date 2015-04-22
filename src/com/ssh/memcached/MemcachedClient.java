@@ -17,15 +17,25 @@
  */
 package com.ssh.memcached;
 
-import java.util.*;
-import java.util.zip.*;
-import java.nio.*;          
-import java.net.InetAddress;
-import java.nio.charset.*;  
-import java.nio.channels.*;
-import java.nio.channels.spi.*;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InvalidClassException;
+import java.io.ObjectOutputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.nio.ByteBuffer;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.SocketChannel;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
 
 /**
  * This is a Memcached client for the Java platform available from

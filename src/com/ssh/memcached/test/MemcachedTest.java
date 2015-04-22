@@ -17,8 +17,10 @@
  */
 package com.ssh.memcached.test;
 
-import com.ssh.memcached.*;
-import java.util.*;
+import java.util.Hashtable;
+
+import com.ssh.memcached.MemcachedClient;
+import com.ssh.memcached.SockIOPool;
 
 public class MemcachedTest {
 

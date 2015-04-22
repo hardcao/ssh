@@ -17,29 +17,32 @@
  */
 package com.ssh.memcached;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.nio.channels.SocketChannel;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
-// java.util
-import java.util.Map;
-import java.util.List;
-import java.util.Set;
-import java.util.Iterator;
 import java.util.ArrayList;
-import java.util.IdentityHashMap;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Date;
-import java.util.Arrays;
+import java.util.IdentityHashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
-
-import java.util.zip.*;
-import java.net.*;
-import java.io.*;
-import java.nio.*;
-import java.nio.channels.*;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.zip.CRC32;
+
 import org.apache.log4j.Logger;
 
 /** 

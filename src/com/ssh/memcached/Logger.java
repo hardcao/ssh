@@ -17,7 +17,9 @@
  */
 package com.ssh.memcached;
 
-import java.util.*;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /** 
  * This is a generic logger class for use in logging.
